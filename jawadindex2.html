@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Linux Commando’s</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at top, #000, #111);
+      color: rgb(255, 0, 0);
+      overflow-x: hidden;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px;
+      background: rgba(0, 0, 0, 0.8);
+      box-shadow: 0 0 20px gold;
+      backdrop-filter: blur(6px);
+      animation: fadeDown 1.5s ease;
+    }
+
+    h1 {
+      font-size: 3rem;
+      color: gold;
+      text-shadow: 0 0 20px gold, 0 0 30px #daa520;
+    }
+
+    p {
+      color: #ccc;
+      font-size: 1.1rem;
+      margin-top: 10px;
+    }
+
+    h2.group {
+      text-align: center;
+      color: gold;
+      margin-top: 40px;
+      text-shadow: 0 0 15px gold;
+    }
+
+    .container {
+      width: 85%;
+      margin: 20px auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .card {
+      background: rgba(0, 0, 0, 0.8);
+      border-radius: 20px;
+      padding: 25px;
+      text-align: center;
+      transition: 0.3s ease;
+      box-shadow: 0 0 10px #daa52033;
+      cursor: pointer;
+      animation: fadeUp 1.2s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.07);
+      box-shadow: 0 0 25px gold;
+      background: rgba(0, 0, 0, 1);
+    }
+
+    h3 {
+      color: gold;
+      margin-bottom: 10px;
+      font-size: 1.6rem;
+    }
+
+    .card p {
+      color: #ddd;
+      font-size: 0.95rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      color: #aaa;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🐧 Linux Commando’s</h1>
+    <p>Gesorteerde lijst van handige basiscommando’s met coole effecten</p>
+  </header>
+
+  <h2 class="group">📁 Navigatie & Mappen</h2>
+  <div class="container">
+    <div class="card" onclick="playSound()"><h3>ls</h3><p>Toont bestanden en mappen in de huidige map.</p></div>
+    <div class="card" onclick="playSound()"><h3>pwd</h3><p>Laat zien waar je je nu bevindt.</p></div>
+    <div class="card" onclick="playSound()"><h3>cd</h3><p>Verandert van map. Voorbeeld: <b>cd /home</b>.</p></div>
+    <div class="card" onclick="playSound()"><h3>mkdir</h3><p>Maakt een nieuwe map. Voorbeeld: <b>mkdir test</b>.</p></div>
+    <div class="card" onclick="playSound()"><h3>rmdir</h3><p>Verwijdert een lege map.</p></div>
+    <div class="card" onclick="playSound()"><h3>tree</h3><p>Laat de mappenstructuur zien in boomvorm.</p></div>
+  </div>
+
+  <h2 class="group">🧾 Bestandsbeheer</h2>
+  <div class="container">
+    <div class="card" onclick="playSound()"><h3>touch</h3><p>Maakt een nieuw, leeg bestand aan.</p></div>
+    <div class="card" onclick="playSound()"><h3>cp</h3><p>Kopieert bestanden of mappen.</p></div>
+    <div class="card" onclick="playSound()"><h3>mv</h3><p>Verplaatst of hernoemt bestanden of mappen.</p></div>
+    <div class="card" onclick="playSound()"><h3>rm</h3><p>Verwijdert bestanden. Gebruik <b>rm -r</b> voor mappen.</p></div>
+    <div class="card" onclick="playSound()"><h3>cat</h3><p>Laat de inhoud van een bestand zien.</p></div>
+    <div class="card" onclick="playSound()"><h3>less</h3><p>Bekijk een bestand pagina per pagina.</p></div>
+    <div class="card" onclick="playSound()"><h3>head</h3><p>Toont de eerste regels van een bestand.</p></div>
+    <div class="card" onclick="playSound()"><h3>tail</h3><p>Toont de laatste regels van een bestand.</p></div>
+    <div class="card" onclick="playSound()"><h3>paste</h3><p>Plakt tekstregels naast elkaar.</p></div>
+    <div class="card" onclick="playSound()"><h3>sort</h3><p>Sorteert tekst of regels in bestanden.</p></div>
+  </div>
+
+  <h2 class="group">⚙️ Systeem & Gebruiker</h2>
+  <div class="container">
+    <div class="card" onclick="playSound()"><h3>sudo</h3><p>Voert commando’s uit als beheerder.</p></div>
+    <div class="card" onclick="playSound()"><h3>nano</h3><p>Opent een simpele teksteditor in de terminal.</p></div>
+    <div class="card" onclick="playSound()"><h3>man</h3><p>Toont de handleiding van een commando.</p></div>
+    <div class="card" onclick="playSound()"><h3>clear</h3><p>Maakt het terminalscherm leeg.</p></div>
+    <div class="card" onclick="playSound()"><h3>exit</h3><p>Sluit de terminal of SSH-sessie af.</p></div>
+  </div>
+
+  <h2 class="group">🌐 Netwerk</h2>
+  <div class="container">
+    <div class="card" onclick="playSound()" href="index2.html" ><h3>ssh</h3><p>Verbindt met een andere computer via het netwerk.</p></div>
+  </div>
+  
+<div class="container">
+  <div class="card" onclick="playSound()">
+    <h3>SSH connectie naar VM</h3>
+    <p>Verbind vanuit je laptop met de VM:<br><b>ssh gebruikersnaam@localhost -p 2222</b></p>
+  </div>
+
+  <div class="card" onclick="playSound()">
+    <h3>SSH service status</h3>
+    <p>Check of SSH draait:<br><b>systemctl status ssh</b></p>
+  </div>
+
+  <div class="card" onclick="playSound()">
+    <h3>NetworkManager status</h3>
+    <p>Check of NetworkManager draait:<br><b>systemctl status NetworkManager</b></p>
+  </div>
+</div>
+
+
+  <footer>
+    <p>💻 Gemaakt door Jawad — ICT Software Development (Niveau 4)</p>
+  </footer>
+
+  <!-- Hover sound -->
+  <audio id="hoverSound" src="https://freesound.org/data/previews/256/256113_3263906-lq.mp3"></audio>
+  <script>
+    function playSound() {
+      const sound = document.getElementById('hoverSound');
+      sound.currentTime = 0;
+      sound.play();
+    }
+  </script>
+</body>
+</html>
